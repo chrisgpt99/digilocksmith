@@ -1,0 +1,74 @@
+.clone-order {
+  display: block;
+  margin: 0 0 2rem;
+}
+
+.clone-order__step {
+  border: 0.1rem solid rgba(var(--color-foreground), 0.15);
+  border-radius: var(--inputs-radius, 0.4rem);
+  padding: 1.6rem;
+  margin: 0 0 1.2rem;
+}
+
+.clone-order__label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+}
+
+fieldset.clone-order__step legend {
+  padding: 0 0.4rem;
+}
+
+.clone-order__required {
+  font-weight: 400;
+  color: rgba(var(--color-foreground), 0.7);
+}
+
+.clone-order__hint {
+  display: block;
+  margin: 0.2rem 0 0.8rem;
+  font-size: 1.3rem;
+  color: rgba(var(--color-foreground), 0.75);
+}
+
+.clone-order__option {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  padding: 0.8rem 0;
+  cursor: pointer;
+}
+
+.clone-order__option input {
+  margin-top: 0.4rem;
+  flex-shrink: 0;
+}
+
+.clone-order__detail {
+  margin-top: 1rem;
+}
+
+.clone-order__input {
+  width: 100%;
+  padding: 1rem 1.2rem;
+  border: 0.1rem solid rgba(var(--color-foreground), 0.4);
+  border-radius: var(--inputs-radius, 0.4rem);
+  background: rgb(var(--color-background));
+  color: rgb(var(--color-foreground));
+  font-size: 1.6rem;
+}
+
+.clone-order__file {
+  font-size: 1.4rem;
+  max-width: 100%;
+}
+
+.clone-order__error {
+  color: rgb(var(--color-foreground));
+  background: rgba(var(--color-foreground), 0.05);
+  border-left: 0.3rem solid #c0392b;
+  padding: 0.6rem 1rem;
+  margin: 0.8rem 0 0;
+  font-size: 1.3rem;
+}

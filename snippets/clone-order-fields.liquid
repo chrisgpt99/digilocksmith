@@ -1,0 +1,97 @@
+{% comment %}
+  Clone order fields shown inside the product form on products tagged clone-service.
+  Every value is sent as a line item property, so it shows on the order in the Shopify admin.
+  Accepts:
+  - product: {Object} product object.
+  - section_id: {String} id of the section the form belongs to.
+
+  Usage:
+  {% render 'clone-order-fields', product: product, section_id: section.id %}
+{% endcomment %}
+{{ 'clone-order.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'clone-order.js' | asset_url }}" defer="defer"></script>
+
+{%- assign field_id = 'CloneOrder-' | append: section_id -%}
+<clone-order-fields
+  class="clone-order"
+  data-zip-prefixes="{{ settings.local_zip_prefixes | escape }}"
+  data-max-photo-mb="{{ settings.max_photo_mb | default: '20' }}"
+>
+  <div class="clone-order__step">
+    <label class="clone-order__label" for="{{ field_id }}-photo">
+      1. Photo of your key <span class="clone-order__required">(required)</span>
+    </label>
+    <p class="clone-order__hint">
+      Show both sides if there is printing on the back. We check every photo before we start.
+    </p>
+    <input
+      id="{{ field_id }}-photo"
+      class="clone-order__file"
+      type="file"
+      name="properties[Key photo]"
+      accept="image/*"
+      required
+    >
+    <p class="clone-order__error" data-error="photo" hidden></p>
+  </div>
+
+  <fieldset class="clone-order__step">
+    <legend class="clone-order__label">2. How should we copy it?</legend>
+
+    <label class="clone-order__option">
+      <input type="radio" name="properties[Copy method]" value="Serial number" required checked>
+      <span>
+        <strong>I'll give you the serial number</strong>
+        <span class="clone-order__hint">Fastest. Type the number printed on your key and keep your original.</span>
+      </span>
+    </label>
+    <label class="clone-order__option">
+      <input type="radio" name="properties[Copy method]" value="Mail in my key">
+      <span>
+        <strong>I'll mail in my key</strong>
+        <span class="clone-order__hint">After checkout you get a packing slip. We ship your copy and your original back together.</span>
+      </span>
+    </label>
+    <label class="clone-order__option">
+      <input type="radio" name="properties[Copy method]" value="Local visit">
+      <span>
+        <strong>Local visit, done on the spot</strong>
+        <span class="clone-order__hint">Within {{ settings.local_service_radius }} of {{ settings.local_service_center_zip }}. We contact you to set a time.</span>
+      </span>
+    </label>
+
+    <div class="clone-order__detail" data-route="Serial number">
+      <label class="clone-order__label" for="{{ field_id }}-serial">Serial number on your key</label>
+      <input
+        id="{{ field_id }}-serial"
+        class="field__input clone-order__input"
+        type="text"
+        name="properties[Serial number]"
+        autocomplete="off"
+        maxlength="64"
+      >
+    </div>
+
+    <div class="clone-order__detail" data-route="Local visit" hidden>
+      <label class="clone-order__label" for="{{ field_id }}-zip">Your ZIP code</label>
+      <input
+        id="{{ field_id }}-zip"
+        class="field__input clone-order__input"
+        type="text"
+        name="properties[Service ZIP]"
+        inputmode="numeric"
+        pattern="[0-9]{5}"
+        maxlength="5"
+        disabled
+      >
+      <p class="clone-order__hint" data-zip-result aria-live="polite"></p>
+    </div>
+  </fieldset>
+
+  <div class="clone-order__step">
+    <label class="clone-order__option">
+      <input type="checkbox" name="properties[Authorized to copy]" value="Yes" required>
+      <span>I own this key or am authorized by my building or property manager to copy it.</span>
+    </label>
+  </div>
+</clone-order-fields>

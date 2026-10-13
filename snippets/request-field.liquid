@@ -1,0 +1,48 @@
+{% comment %}
+  One labelled input for the contact-based request forms (bulk orders, local visits).
+  Accepts:
+  - form_id: {String} id prefix of the form.
+  - key: {String} field name, sent as contact[key].
+  - label: {String} visible label.
+  - type: {String} input type (default text), or 'textarea'.
+  - required: {Boolean} marks the field required.
+  - autocomplete: {String} autocomplete hint (optional).
+  - value: {String} value to refill after a failed submit (optional).
+
+  Usage:
+  {% render 'request-field', form_id: 'BulkForm', key: 'Company', label: 'Company' %}
+{% endcomment %}
+{%- assign input_id = form_id | append: '-' | append: key | handleize -%}
+<div class="field">
+  {%- if type == 'textarea' -%}
+    <textarea
+      id="{{ input_id }}"
+      class="text-area field__input"
+      name="contact[{{ key }}]"
+      rows="6"
+      placeholder="{{ label }}"
+      {% if required %}
+        required
+      {% endif %}
+    >{{ value }}</textarea>
+  {%- else -%}
+    <input
+      id="{{ input_id }}"
+      class="field__input"
+      type="{{ type | default: 'text' }}"
+      name="contact[{{ key }}]"
+      value="{{ value }}"
+      placeholder="{{ label }}"
+      {% if autocomplete %}
+        autocomplete="{{ autocomplete }}"
+      {% endif %}
+      {% if required %}
+        required
+      {% endif %}
+    >
+  {%- endif -%}
+  <label class="field__label" for="{{ input_id }}">
+    {{- label }}
+    {%- if required %} <span aria-hidden="true">*</span>{% endif -%}
+  </label>
+</div>
