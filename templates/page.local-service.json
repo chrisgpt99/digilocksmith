@@ -1,0 +1,9 @@
+{
+  "sections": {
+    "local": {
+      "type": "local-service",
+      "settings": {}
+    }
+  },
+  "order": ["local"]
+}

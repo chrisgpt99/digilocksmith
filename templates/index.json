@@ -1,0 +1,244 @@
+{
+  "sections": {
+    "hero": {
+      "type": "rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Copy your building key fob, card or parking tag",
+            "heading_size": "h0"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Upload a photo, pay per tag, and get an exact working copy. Keep your original with a serial number, mail it in, or have us copy it on the spot near Santa Ana.</p>"
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "button_label": "Start my order",
+            "button_link": "/collections/all",
+            "button_style_secondary": false,
+            "button_label_2": "Local service",
+            "button_link_2": "/pages/local-service",
+            "button_style_secondary_2": true
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text",
+        "button"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-3",
+        "full_width": true,
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "how_it_works": {
+      "type": "multicolumn",
+      "blocks": {
+        "step1": {
+          "type": "column",
+          "settings": {
+            "title": "1. Snap a photo",
+            "text": "<p>Pick your tag type and upload a photo of your key so we know exactly what you have.</p>"
+          }
+        },
+        "step2": {
+          "type": "column",
+          "settings": {
+            "title": "2. Choose how we copy it",
+            "text": "<p>Give us the serial number, mail in your key, or book a local visit within 100 miles of 92704.</p>"
+          }
+        },
+        "step3": {
+          "type": "column",
+          "settings": {
+            "title": "3. Get your copy",
+            "text": "<p>We test every copy before it ships. If we can't copy it, you get your money back.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "step1",
+        "step2",
+        "step3"
+      ],
+      "settings": {
+        "title": "How it works",
+        "heading_size": "h1",
+        "image_width": "third",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "scheme-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 48,
+        "padding_bottom": 36
+      }
+    },
+    "tag_types": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Pick your tag type",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "all",
+        "products_to_show": 8,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "scheme-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "quick_add": "none"
+      }
+    },
+    "bulk": {
+      "type": "rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Need tags for a whole building?",
+            "heading_size": "h1"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Property managers, HOAs and businesses: tell us what you need and we'll send a quote.</p>"
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "button_label": "Request a bulk quote",
+            "button_link": "/pages/bulk-orders",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text",
+        "button"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-2",
+        "full_width": true,
+        "padding_top": 48,
+        "padding_bottom": 48
+      }
+    },
+    "faq": {
+      "type": "collapsible-content",
+      "blocks": {
+        "q0": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What can you copy?",
+            "icon": "question_mark",
+            "row_content": "<p>Most apartment and condo key fobs, building key cards, stickers, UHF parking tags and many garage remotes. Send a photo with your order and we'll confirm before we start.</p>"
+          }
+        },
+        "q1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Do I have to mail in my key?",
+            "icon": "question_mark",
+            "row_content": "<p>Usually not. Many tags can be copied from the number printed on them. If yours can't, choose mail-in and we'll ship your copy and your original back together. Near Santa Ana? Book a local visit instead.</p>"
+          }
+        },
+        "q2": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What if my key can't be copied?",
+            "icon": "question_mark",
+            "row_content": "<p>You get a full refund of the tag price, and if you mailed it in we return your original at our cost.</p>"
+          }
+        },
+        "q3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I get it as a card or sticker instead of a fob?",
+            "icon": "question_mark",
+            "row_content": "<p>Yes. Pick the format you want on the product page; the copy works the same way.</p>"
+          }
+        },
+        "q4": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Is it legal to copy my building key?",
+            "icon": "question_mark",
+            "row_content": "<p>You need to own the key or be authorized by your building or property manager. Every order asks you to confirm this.</p>"
+          }
+        },
+        "q5": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How long does it take?",
+            "icon": "question_mark",
+            "row_content": "<p>Serial-number orders usually ship within one to two business days. Mail-in orders ship back within one to two business days after your key arrives.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "q0",
+        "q1",
+        "q2",
+        "q3",
+        "q4",
+        "q5"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "Questions",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "container_color_scheme": "scheme-2",
+        "color_scheme": "scheme-1",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "how_it_works",
+    "tag_types",
+    "bulk",
+    "faq"
+  ]
+}

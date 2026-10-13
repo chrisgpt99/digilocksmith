@@ -1,0 +1,9 @@
+{
+  "sections": {
+    "bulk": {
+      "type": "bulk-order-form",
+      "settings": {}
+    }
+  },
+  "order": ["bulk"]
+}
